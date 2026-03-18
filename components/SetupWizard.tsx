@@ -102,7 +102,14 @@ export function SetupWizard() {
   function handleCsvUpload(file: File) {
     const reader = new FileReader();
     reader.onload = (e) => {
-      const text = (e.target?.result as string) ?? "";
+      const buffer = e.target?.result as ArrayBuffer;
+      // Intentar UTF-8 estricto; si falla, usar Windows-1252 (Latin-1 extendido)
+      let text: string;
+      try {
+        text = new TextDecoder("utf-8", { fatal: true }).decode(buffer);
+      } catch {
+        text = new TextDecoder("windows-1252").decode(buffer);
+      }
       const lines = text.split(/\r?\n/).filter((l) => l.trim());
 
       // Detectar delimitador mirando la primera línea que tenga más de una columna
@@ -132,7 +139,7 @@ export function SetupWizard() {
         },
       });
     };
-    reader.readAsText(file, "UTF-8");
+    reader.readAsArrayBuffer(file);
   }
 
   function autoMapColumns(variables: string[], headers: string[]) {
