@@ -69,8 +69,7 @@ export function SetupWizard() {
 <p>Queremos agradecerte por haber sido parte del webinar<br>
 <strong>"5 errores de enfermería que aumentan la presión intracraneana y cómo evitarlos"</strong>.<br>
 Fue un encuentro muy valioso y nos alegra que hayas sido parte 🙌</p>
-<p>📜 Ya podés acceder a tu certificado de participación en el siguiente enlace:</p>
-<p>[LINK CERTIFICADO]</p>
+<p>📜 Encontrás tu certificado de participación adjunto en este email.</p>
 <hr style="border:none;border-top:1px solid #eee;margin:24px 0;">
 <p>Y si querés seguir profundizando en este camino, te invitamos a dar el próximo paso en tu formación 👇</p>
 <p>🧠 <strong>Curso: Atención del Paciente Neurocrítico en Medicina Intensiva</strong><br>
