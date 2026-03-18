@@ -64,11 +64,24 @@ export function SetupWizard() {
   const [emailConfig, setEmailConfig] = useState<EmailConfig>({
     emailColumn: "",
     senderName: "INEC Formación",
-    subject: "Tu certificado de participación - {{nombre}}",
-    body: `<p>Hola <strong>{{nombre}}</strong>,</p>
-<p>Adjuntamos tu certificado de participación.</p>
-<p>¡Gracias por participar!</p>
-<p><em>INEC Formación</em></p>`,
+    subject: "Tu certificado de participación - Webinar Enfermería Neurológica",
+    body: `<p>Hola!</p>
+<p>Queremos agradecerte por haber sido parte del webinar<br>
+<strong>"5 errores de enfermería que aumentan la presión intracraneana y cómo evitarlos"</strong>.<br>
+Fue un encuentro muy valioso y nos alegra que hayas sido parte 🙌</p>
+<p>📜 Ya podés acceder a tu certificado de participación en el siguiente enlace:</p>
+<p>[LINK CERTIFICADO]</p>
+<hr style="border:none;border-top:1px solid #eee;margin:24px 0;">
+<p>Y si querés seguir profundizando en este camino, te invitamos a dar el próximo paso en tu formación 👇</p>
+<p>🧠 <strong>Curso: Atención del Paciente Neurocrítico en Medicina Intensiva</strong><br>
+Comienza en abril<br>
+Formación práctica y actualizada para el abordaje del paciente crítico neurológico</p>
+<p>🫀 <strong>Nuevo curso: Cuidado del Paciente Cardiocrítico en Medicina Intensiva</strong><br>
+Una propuesta enfocada en el monitoreo, reconocimiento y manejo del paciente cardiovascular crítico.</p>
+<p>Más información en:<br>
+<a href="https://inecformacion.com/">https://inecformacion.com/</a></p>
+<p>Seguimos creciendo junto a profesionales de toda Latinoamérica 🌎<br>
+y transformando juntos la forma de cuidar ✨</p>`,
   });
 
   // Step 5 – Progreso
